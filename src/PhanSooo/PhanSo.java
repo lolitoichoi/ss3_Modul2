@@ -6,6 +6,8 @@ public class PhanSo {
     private int phanTu;
     private int phanMau;
 
+
+
     public void input() {
         Scanner in = new Scanner(System.in);
 
