@@ -22,6 +22,10 @@ public class Mobile {
         this.thoiGianBaoHanh = thoiGianBaoHanh;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void input() {
         Scanner in = new Scanner(System.in);
 
@@ -42,10 +46,10 @@ public class Mobile {
     }
 
     public void output() {
-
-        System.out.println("Ten dien thoai: " + tenDienThoai);
-        System.out.println("Gia dien thoai: " + giaBan);
-        System.out.println("Hang sx: " + hangSX);
-        System.out.println("Thoi gian bao hanh: " + thoiGianBaoHanh);
+        System.out.println("ID: " + this.id);
+        System.out.println("Ten dien thoai: " + this.tenDienThoai);
+        System.out.println("Gia dien thoai: " + this.giaBan);
+        System.out.println("Hang sx: " + this.hangSX);
+        System.out.println("Thoi gian bao hanh: " + this.thoiGianBaoHanh);
     }
 }
