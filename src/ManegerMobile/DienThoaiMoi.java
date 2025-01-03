@@ -10,10 +10,16 @@ public class DienThoaiMoi extends Mobile{
         super();
     }
 
-    public DienThoaiMoi(int id, String tenDienThoai, double giaBan, String hangSX, int thoiGianBaoHanh, int soLuong) {
+    public DienThoaiMoi(String id, String tenDienThoai, double giaBan, String hangSX, int thoiGianBaoHanh, int soLuong) {
         super(id, tenDienThoai, giaBan, hangSX, thoiGianBaoHanh);
         this.soLuong = soLuong;
     }
+
+    @Override
+    public double calculateTotalPrice() {
+        return getGiaBan() * soLuong;
+    }
+
     public void input() {
         Scanner in = new Scanner(System.in);
 

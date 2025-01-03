@@ -2,8 +2,8 @@ package ManegerMobile;
 
 import java.util.Scanner;
 
-public class Mobile {
-    private int id;
+public abstract class Mobile {
+    private String id;
     private String tenDienThoai;
     private double giaBan;
     private String hangSX;
@@ -11,10 +11,10 @@ public class Mobile {
 
 
     public Mobile() {
-
+        super();
     }
 
-    public Mobile(int id, String tenDienThoai, double giaBan, String hangSX, int thoiGianBaoHanh) {
+    public Mobile(String id, String tenDienThoai, double giaBan, String hangSX, int thoiGianBaoHanh) {
         this.id = id;
         this.tenDienThoai = tenDienThoai;
         this.giaBan = giaBan;
@@ -22,15 +22,53 @@ public class Mobile {
         this.thoiGianBaoHanh = thoiGianBaoHanh;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
+
+    public String getTenDienThoai() {
+        return tenDienThoai;
+    }
+
+    public String getHangSX() {
+        return hangSX;
+    }
+
+    public double getGiaBan() {
+        return giaBan;
+    }
+
+    public int getThoiGianBaoHanh() {
+        return thoiGianBaoHanh;
+    }
+
+    public void setThoiGianBaoHanh(int thoiGianBaoHanh) {
+        this.thoiGianBaoHanh = thoiGianBaoHanh;
+    }
+
+    public void setHangSX(String hangSX) {
+        this.hangSX = hangSX;
+    }
+
+    public void setGiaBan(double giaBan) {
+        this.giaBan = giaBan;
+    }
+
+    public void setTenDienThoai(String tenDienThoai) {
+        this.tenDienThoai = tenDienThoai;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public abstract double calculateTotalPrice();
 
     public void input() {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Moi ban nhap id :");
-        id = in.nextInt();
+        id = String.valueOf(in.nextInt());
 
         System.out.println("Moi ban nhap ten dien thoai");
         tenDienThoai = in.nextLine();
