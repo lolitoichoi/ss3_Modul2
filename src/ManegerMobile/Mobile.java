@@ -2,7 +2,7 @@ package ManegerMobile;
 
 import java.util.Scanner;
 
-public abstract class Mobile {
+public abstract class Mobile implements  Comparable<Mobile>{
     private String id;
     private String tenDienThoai;
     private double giaBan;
@@ -20,6 +20,11 @@ public abstract class Mobile {
         this.giaBan = giaBan;
         this.hangSX = hangSX;
         this.thoiGianBaoHanh = thoiGianBaoHanh;
+    }
+
+    @Override
+    public int compareTo(Mobile o) {
+        return Double.compare(this.giaBan, o.giaBan);
     }
 
     public String getId() {

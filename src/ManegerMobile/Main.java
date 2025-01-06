@@ -392,7 +392,7 @@ public class Main {
             } while (choose < 1 || choose > 4);
         }
     }
-
+    // tìm kieem dien thoai cu
     public static void searchOldPhone() {
         int choose;
         while (true) {
@@ -454,7 +454,7 @@ public class Main {
             } while (choose < 1 || choose > 4);
         }
     }
-
+    // Tìm kiếm điện thoại mơ
     public static void searchNewPhone() {
         int choose;
         while (true) {
